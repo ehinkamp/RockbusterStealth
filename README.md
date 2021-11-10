@@ -1,5 +1,4 @@
 # Portfolio-SQL
-SQL queries for CareerFoundry project
 
 This project focused on using SQL to analyze the data of a fictional movie rental company (Rockbuster Stealth) in order to help them successfully launch their own streaming service. Of special importance were the following questions:
 
