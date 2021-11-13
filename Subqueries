@@ -1,4 +1,4 @@
-The following queries involved the use of subqueries to find the top 5 customers.
+The following queries involved the use of subqueries to find information about the top 5 customers.
 
 This project had a curious definition of what constituted the "top 5 customers." Rather than the five customers who spent the most money, the exercises led me to first find the 10 countries with the most customers, then the 10 cities within those countries with the most customers, then the highest spenders of the customers within those cities. As the purpose of these exercises was to get more comfortable with using SQL, I went along with it.
 
