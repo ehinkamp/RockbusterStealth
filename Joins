@@ -1,6 +1,6 @@
 The following queries involved joining multiple tables in order to access the information desired.  
   
-### Most popular genres by country  
+Most popular genres by country:
   
 SELECT SUM(A.amount) AS total_sales, J.name, F.country  
 FROM payment A  
@@ -15,7 +15,7 @@ INNER JOIN film_category I on H.film_id=I.film_id
 INNER JOIN category J on I.category_id=J.category_id  
 GROUP BY J.name, F.country  
   
-### Customer count & revenue by country  
+Customer count & revenue by country:
   
 SELECT D.country, COUNT(A.customer_id) AS customer_count, SUM(E.amount) AS total_payment  
 FROM customer A  
@@ -25,7 +25,7 @@ INNER JOIN country D ON C.country_ID=D.country_ID
 INNER JOIN payment E ON a.customer_id=E.customer_id  
 GROUP BY country  
   
-### Highest grossing movies  
+Highest grossing movies:
   
 SELECT SUM(A.amount) AS total_sales, D.title, F.name AS genre  
 FROM payment A  
@@ -38,7 +38,7 @@ GROUP BY D.title, genre
 ORDER BY total_sales DESC  
 LIMIT 10  
   
-### Lowest grossing movies  
+Lowest grossing movies:
   
 SELECT SUM(A.amount) AS total_sales, D.title, F.name AS genre  
 FROM payment A  
