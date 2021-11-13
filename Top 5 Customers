@@ -1,0 +1,38 @@
+This project had a curious definition of what constitutes the "top 5 customers." Rather than the five customers who spent the most money, the exercises led me to first find the 10 countries with the most customers, then the 10 cities within those countries with the most customers, then the highest spenders of the customers within those cities. As the purpose of these exercises is to get more comfortable with using SQL, I went along with it.
+
+Top 10 countries:
+
+SELECT D.country, COUNT(customer_id)
+FROM customer A
+INNER JOIN address B on A.address_id=B.address_id
+INNER JOIN city C on B.city_id=C.city_id
+INNER JOIN country D on C.country_id=D.country_id
+GROUP BY D.country
+ORDER BY COUNT(customer_id) DESC
+LIMIT 10
+
+Top 10 cities within countries:
+
+SELECT C.city, D.country, COUNT (customer_id)
+FROM customer A
+INNER JOIN address B on A.address_id=B.address_id
+INNER JOIN city C on B.city_id=C.city_id
+INNER JOIN country D on C.country_id=D.country_id
+WHERE D.country IN ('India', 'China', 'United States', 'Japan', 'Mexico', 'Brazil', 'Russian Federation', 'Philippines', 'Turkey', 'Indonesia')
+GROUP BY C.city, D.country
+ORDER BY COUNT(customer_id) DESC
+LIMIT 10
+
+Top 10 customers within cities:
+
+SELECT E.customer_id, A.first_name, A.last_name, C.city, D.country, SUM(amount) AS total_paid
+FROM customer A
+INNER JOIN address B on A.address_id=B.address_id
+INNER JOIN city C on B.city_id=C.city_id
+INNER JOIN country D on C.country_id=D.country_id
+INNER JOIN payment E on A.customer_id=E.customer_id
+WHERE D.country IN ('India', 'China', 'United States', 'Japan', 'Mexico', 'Brazil', 'Russian Federation', 'Philippines', 'Turkey', 'Indonesia')
+AND C.city IN ('Aurora', 'Atlixco', 'Xintai', 'Adoni', 'Dhule (Dhulia)', 'Kurashiki', 'Pingxiang', 'Sivas', 'Celaya', 'So Leopoldo')
+GROUP BY E.customer_id, A.first_name, A.last_name, C.city, D.country
+ORDER BY SUM(amount) DESC
+LIMIT 5
