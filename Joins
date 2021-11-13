@@ -1,6 +1,6 @@
 The following queries involved joining multiple tables in order to access the information desired.
 
-### Most popular genres by country
+### **Most popular genres by country**
 
 SELECT SUM(A.amount) AS total_sales, J.name, F.country
 FROM payment A
