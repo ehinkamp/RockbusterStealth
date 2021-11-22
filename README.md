@@ -10,4 +10,4 @@ This project focused on using SQL to analyze the data of a fictional movie renta
 
 The final spreadsheet and data dictionary contain most of the completed work, but examples of specific skills are displayed in their own files.
 
-The accompanying Tableau presentation can be found [here](https://public.tableau.com/app/profile/errol.hinkamp/viz/Task3_10_16304181479750/RockbusterDataAnalysis?publish=yes)
+The accompanying Tableau presentation can be found [here.](https://public.tableau.com/app/profile/errol.hinkamp/viz/Task3_10_16304181479750/RockbusterDataAnalysis?publish=yes)
