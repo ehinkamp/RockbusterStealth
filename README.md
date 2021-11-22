@@ -7,3 +7,5 @@ This project focused on using SQL to analyze the data of a fictional movie renta
 * Which countries are Rockbuster customers based in?     
 * Where are customers with a high lifetime value based?     
 * Do sales figures vary between geographic regions?
+
+The final spreadsheet and data dictionary contain most of the work done, but examples of specific skills are displayed in their own files.
