@@ -8,4 +8,6 @@ This project focused on using SQL to analyze the data of a fictional movie renta
 * Where are customers with a high lifetime value based?     
 * Do sales figures vary between geographic regions?
 
-The final spreadsheet and data dictionary contain most of the work done, but examples of specific skills are displayed in their own files.
+The final spreadsheet and data dictionary contain most of the completed work, but examples of specific skills are displayed in their own files.
+
+The accompanying Tableau presentation can be found [here](https://public.tableau.com/app/profile/errol.hinkamp/viz/Task3_10_16304181479750/RockbusterDataAnalysis?publish=yes)
